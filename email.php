@@ -49,9 +49,13 @@
     $assunto = "Contato pelo Site";
 
     // É necessário indicar que o formato do e-mail é html
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From: $nome <$email>';
+    $headers  = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+    $headers .= "From: $nome < $email >" . "\r\n";
+    $headers .= "X-Sender: $nome < $email >" . "\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+    $headers .= "X-Priority: 1" . "\r\n";
+    $headers .= "Return-Path: $email" . "\r\n";
     //$headers .= "Bcc: $EmailPadrao\r\n";
 
     $enviaremail = mail($destino, $assunto, $arquivo, $headers);
@@ -60,6 +64,7 @@
         echo "<meta http-equiv='refresh' content='10;URL=index.php'>";
     } else {
         $mgm = "ERRO AO ENVIAR E-MAIL!";
-        echo "";
+        $errorMessage = error_get_last()['message'];
+        echo $mgm . " - " . $errorMessage;
     }
 ?>
