@@ -5,7 +5,7 @@
     $mensagem = $_POST['message'];
     $data_envio = date('d/m/Y');
     $hora_envio = date('H:i:s');
-    
+
     // Corpo E-mail
     $arquivo = "
         <style type='text/css'>
@@ -33,7 +33,7 @@
                         </tr>
                         <tr>
                             <td width='320'>E-mail:<b>$email</b></td>
-                        </tr>                
+                        </tr>
                         <tr>
                             <td width='320'>Mensagem:$mensagem</td>
                         </tr>
@@ -44,17 +44,17 @@
                 </tr>
             </table>
         </html>";
-    
+
     // Emails para quem será enviado o formulário
-    $destino = 'contato@devwaves.com.br';
+    $destino = 'contato@crhradvogados.com.br';
     $assunto = 'Contato pelo Site';
 
     // É necessário indicar que o formato do e-mail é html
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-    $headers[] = 'To: Contato <contato@devwaves.com.br>';
+    $headers[] = "To: Contato <$destino>";
     $headers[] = "From: $nome <$email>";
-    $headers[] = 'Cc: matheusmatmac@hotmail.com';
+    $headers[] = 'Cc: Thales <thales@crhradvogados.com.br>';
     //$headers .= "Bcc: $EmailPadrao\r\n";
 
     $enviaremail = mail($destino, $assunto, $arquivo, implode("\r\n", $headers));
@@ -64,6 +64,6 @@
     } else {
         $mgm = "ERRO AO ENVIAR E-MAIL!";
         $errorMessage = error_get_last()['message'];
-        echo $mgm . " - " . $errorMessage;
+        echo $mgm . ' - ' . $errorMessage;
     }
 ?>
