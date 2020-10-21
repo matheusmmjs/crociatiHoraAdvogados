@@ -46,21 +46,18 @@
         </html>";
     
     // Emails para quem será enviado o formulário
-    $emailenviar = "contato@devwaves.com.br";
-    $destino = $emailenviar;
-    $assunto = "Contato pelo Site";
+    $destino = 'contato@devwaves.com.br';
+    $assunto = 'Contato pelo Site';
 
     // É necessário indicar que o formato do e-mail é html
-    $headers  = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-    $headers .= "From: $nome < $email >" . "\r\n";
-    $headers .= "X-Sender: $nome < $email >" . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-    $headers .= "X-Priority: 1" . "\r\n";
-    $headers .= "Return-Path: $email" . "\r\n";
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+    $headers[] = 'To: Contato <contato@devwaves.com.br>';
+    $headers[] = "From: $nome <$email>";
+    $headers[] = 'Cc: matheusmatmac@hotmail.com';
     //$headers .= "Bcc: $EmailPadrao\r\n";
 
-    $enviaremail = mail($destino, $assunto, $arquivo, $headers);
+    $enviaremail = mail($destino, $assunto, $arquivo, implode("\r\n", $headers));
     if($enviaremail){
         $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
         echo "<meta http-equiv='refresh' content='10;URL=index.php'>";
