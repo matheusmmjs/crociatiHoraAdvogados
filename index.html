@@ -2,12 +2,6 @@
 <html lang="pt-br">
 
 <head>
-  <!-- 
-    More Templates Visit ==> ProBootstrap.com
-    Free Template by ProBootstrap.com under the License Creative Commons 3.0 ==> (probootstrap.com/license)
-
-    IMPORTANT: You can do whatever you want with this template but you need to keep the footer link back to ProBootstrap.com
-    -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -588,56 +582,67 @@
 
       <div class="row">
         <div class="col-md-8 pr-md-5 pr-sm-0 mb-4">
-          <form action="email.php" method="POST">
+          <form action="email.php" name="form_contato" method="POST">
             <div class="row">
               <div class="col-md">
                 <div class="form-group">
                   <label for="name">Nome</label>
-                  <input type="text" class="form-control p-3 rounded-0" id="name">
+                  <input type="text" class="form-control p-3 rounded-0" name="name">
                 </div>
               </div>
               <div class="col-md">
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="text" class="form-control p-3 rounded-0" id="email">
+                  <input type="text" class="form-control p-3 rounded-0" name="email">
                 </div>
               </div>
             </div>
-
             <div class="form-group">
               <label for="message">Mensagem</label>
-              <textarea cols="30" rows="10" class="form-control p-3 rounded-0" id="message"></textarea>
+              <textarea cols="30" rows="10" class="form-control p-3 rounded-0" name="message"></textarea>
             </div>
-            <div class="form-group">
               <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0"
                 value="Enviar Mensagem">
+                <input type="reset" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0"
+                value="Limpar Campos">
             </div>
           </form>
         </div>
         <div class="col-md-4">
           <ul class="pb_contact_details_v1">
+            <legend class="text-uppercase">Unidade Mooca</legend>
+            <li>
+              <span class="text-uppercase">Endereço</span>
+              Rua Tobias Barreto, N° 662 </br>
+              Mooca, SP </br>
+              CEP 03176-000
+            </li>
+            <li>
+              <span class="text-uppercase">Telefone</span>
+              +55 11 2607-4451
+            </li>
+            <li>
+              <span class="text-uppercase">Email</span>
+              thales@crhradvogados.com.br
+            </li>
+
+            <legend class="text-uppercase">Unidade Itaqua</legend>
+            <li>
+              <span class="text-uppercase">Endereço</span>
+              Jardim Caiuby, Estrada Dos Indios, N° 910 </br>
+              Itaquaquecetuba, SP </br>
+              CEP 08587-000
+            </li>
+            <li>
+              <span class="text-uppercase">Telefone</span>
+              +55 11 4641-6616 </br>
+              +55 11 4641-6547 </br>
+            </li>
             <li>
               <span class="text-uppercase">Email</span>
               contato@crhradvogados.com.br
             </li>
-            <li>
-              <span class="text-uppercase">Telefone</span>
-              +55 11 1494905-5875 <br>
-              +55 11 3539-2384 <br>
-              +55 11 3539-2385
-            </li>
             <!--<li>
-                <span class="text-uppercase">Fax</span>
-                +30 976 1382 9922
-              </li>-->
-            <li>
-              <span class="text-uppercase">Endereço</span>
-              São Paulo, SP <br>
-              Mooca <br>
-              Rua Tobias Barreto, 662 <br>
-              CEP 03176-000
-            </li>
-            <li>
               <ul class="list-inline">
                 <li class="list-inline-item">
                   <a href="https://www.facebook.com/crociatisociedadedeadvogados" class="p-2" target="_blank"><i
@@ -656,11 +661,11 @@
                   <a href="#" class="p-2"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
-            </li>
+            </li>-->
             <li>
               <div class="form-group folderCrociati">
                 <a class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0"
-                  href="assets/PDF/apresentação_CROCIATI_HORA.pdf" download="FolderCrociati">Baixe nosso folder
+                  href="assets/PDF/apresentação_CROCIATI_HORA.pdf" download="Folder CRHR">Baixe nosso folder
                   digital</a>
               </div>
             </li>
@@ -677,13 +682,13 @@
       <div class="row text-center">
         <div class="col">
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://www.facebook.com/crociatisociedadedeadvogados" class="p-2"
-                target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/devwaves01" class="p-2" target="_blank"><i
+                  class="fa fa-facebook"></i></a></li>
             <!--<li class="list-inline-item"><a href="#" class="p-2"><i class="fab fa-facebook-messenger"></i></a></li>-->
-            <li class="list-inline-item"><a href="https://www.instagram.com/crociati_soc._de_advogados" class="p-2"
-                target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/dev.waves/" class="p-2" target="_blank"><i
+                  class="fa fa-instagram"></i></a></li>
+            <!--<li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>-->
           </ul>
         </div>
       </div>
@@ -692,7 +697,7 @@
           <p class="pb_font-14">Desenvolvido por
             <a href="https://www.devwaves.com.br/" target="_blank">
               <span class="pb_font-16"
-                style="font-size: larger; color: #51b4d2; font-weight: bold; font-family: sans-serif;"><i>Dev
+                style="font-size: larger; color: #2c72c7; font-weight: bold; font-family: sans-serif;"><i>Dev
                   Waves</i>
               </span>
             </a>
