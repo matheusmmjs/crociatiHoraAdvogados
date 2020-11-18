@@ -409,7 +409,7 @@
 .pb_cover_v3,
 .pb_cover_v4 {
   position: relative;
-  height: 95vh; }
+  height: 100vh; }
   @media (max-width: 767px) {
     .pb_cover,
     .pb_cover_v1,
@@ -1721,4 +1721,17 @@ a {
 
 .pb_font-14 span:hover {
   text-decoration: underline;
+}
+
+.sub-heading{
+  margin-top: 60%;
+  text-align: center;
+}
+
+.creditos img{
+  margin-left: 3px;
+}
+
+.navbar-expand-lg {
+  max-height: 100px;
 }
