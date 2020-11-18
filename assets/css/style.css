@@ -1739,7 +1739,10 @@ a {
 @media (max-width: 400px) {
   .navbar-expand-lg .navbar-brand {
     margin-top: -40px;
-    max-height: 70px;
+  }
+
+  .sub-heading{
+    margin-top: 100%;
   }
 
   .navbar-expand-lg .navbar-brand img {
