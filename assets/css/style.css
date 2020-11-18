@@ -1735,3 +1735,14 @@ a {
 .navbar-expand-lg {
   max-height: 100px;
 }
+
+@media (max-width: 400px) {
+  .navbar-expand-lg .navbar-brand {
+    margin-top: -40px;
+    max-height: 70px;
+  }
+
+  .navbar-expand-lg .navbar-brand img {
+     height: 150px;
+  }
+}
